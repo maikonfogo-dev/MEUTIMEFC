@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/(public)/leagues/page": "app/(public)/leagues/page.js",
+  "/api/auth/me/route": "app/api/auth/me/route.js",
+  "/(public)/team/[slug]/page": "app/(public)/team/[slug]/page.js",
+  "/(public)/team/[slug]/about/page": "app/(public)/team/[slug]/about/page.js",
+  "/(public)/team/[slug]/store/page": "app/(public)/team/[slug]/store/page.js"
+}

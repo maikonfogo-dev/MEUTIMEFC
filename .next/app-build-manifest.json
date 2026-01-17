@@ -1,0 +1,85 @@
+{
+  "pages": {
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/css-src_app_globals_css-node_modules_next_font_google_target_css-node_modules_next_font_googl-bbb018.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/(public)/legal/privacy/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/legal/privacy/page.js"
+    ],
+    "/(public)/auth/login/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/auth/login/page.js"
+    ],
+    "/(public)/auth/register/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/auth/register/page.js"
+    ],
+    "/(public)/team/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/team/[slug]/page.js"
+    ],
+    "/(public)/team/[slug]/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/team/[slug]/layout.js"
+    ],
+    "/(public)/team/[slug]/store/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/team/[slug]/store/page.js"
+    ],
+    "/(public)/team/[slug]/store/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/team/[slug]/store/layout.js"
+    ],
+    "/(public)/leagues/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/leagues/page.js"
+    ],
+    "/(public)/team/[slug]/stats/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/team/[slug]/stats/page.js"
+    ],
+    "/(public)/team/[slug]/squad/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/team/[slug]/squad/page.js"
+    ],
+    "/(public)/team/[slug]/matches/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/team/[slug]/matches/page.js"
+    ],
+    "/(public)/team/[slug]/about/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/team/[slug]/about/page.js"
+    ],
+    "/(public)/team/[slug]/championships/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/team/[slug]/championships/page.js"
+    ],
+    "/(public)/team/[slug]/live/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(public)/team/[slug]/live/[id]/page.js"
+    ]
+  }
+}

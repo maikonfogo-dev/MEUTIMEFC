@@ -1,0 +1,52 @@
+[
+  {
+    "id": "4a898cca-adc3-4f44-a4a9-d6bfef745bce",
+    "name": "Renato Silva (Admin Time)",
+    "email": "renato@gmail.com",
+    "password_hash": "$2b$10$CuSTiX3E.rWWwc/uSH3X1emF7tVRiLHUm.O9Rx/B2TcWus.8Z1Mh.",
+    "role": "admin_time",
+    "is_socio": false,
+    "team_id": "real-madruga",
+    "created_at": "2026-01-13T04:32:55.408Z"
+  },
+  {
+    "id": "super-admin-user",
+    "name": "Super Admin",
+    "email": "admin@meutime.com",
+    "password_hash": "$2b$10$CuSTiX3E.rWWwc/uSH3X1emF7tVRiLHUm.O9Rx/B2TcWus.8Z1Mh.",
+    "role": "super_admin",
+    "is_socio": true,
+    "team_id": "global",
+    "created_at": "2026-01-13T05:00:00.000Z"
+  },
+  {
+    "id": "organizer-user",
+    "name": "Organizador Liga",
+    "email": "organizador@meutime.com",
+    "password_hash": "$2b$10$CuSTiX3E.rWWwc/uSH3X1emF7tVRiLHUm.O9Rx/B2TcWus.8Z1Mh.",
+    "role": "organizador_liga",
+    "is_socio": false,
+    "team_id": "liga-a",
+    "leagueId": "liga-a",
+    "created_at": "2026-01-13T05:00:00.000Z"
+  },
+  {
+    "id": "referee-user",
+    "name": "Juiz Arnaldo",
+    "email": "juiz@meutime.com",
+    "password_hash": "$2b$10$CuSTiX3E.rWWwc/uSH3X1emF7tVRiLHUm.O9Rx/B2TcWus.8Z1Mh.",
+    "role": "arbitro",
+    "is_socio": false,
+    "team_id": "global",
+    "created_at": "2026-01-13T05:00:00.000Z"
+  },
+  {
+    "id": "b7e18a2d-77ad-4e88-8ef6-42bc61eaba83",
+    "name": "Usuário 8337",
+    "phone": "62986358337",
+    "role": "torcedor",
+    "is_socio": false,
+    "team_id": "default-team",
+    "created_at": "2026-01-15T03:06:15.553Z"
+  }
+]

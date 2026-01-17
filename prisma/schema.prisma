@@ -1,0 +1,192 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id            String    @id @default(uuid())
+  name          String
+  email         String?   @unique
+  phone         String?   @unique
+  password_hash String?
+  role          String
+  is_socio      Boolean   @default(false)
+  team_id       String    
+  created_at    DateTime  @default(now())
+  
+  team          Team?     @relation(fields: [team_id], references: [id])
+  passwordResets PasswordReset[]
+}
+
+model PasswordReset {
+  id        String   @id @default(uuid())
+  userId    String
+  channel   String
+  contact   String
+  expires_at DateTime
+  used      Boolean  @default(false)
+  
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Team {
+  id          String   @id // This is the slug (e.g. 'real-madruga')
+  name        String
+  planId      String?
+  city        String?
+  whatsapp    String?
+  logoUrl     String?
+  
+  primaryColor String?
+  secondaryColor String?
+  accentColor String?
+
+  users       User[]
+  players     Player[]
+  products    Product[]
+  matches     Match[]
+  sponsors    Sponsor[]
+  news        News[]
+  members     Member[]
+}
+
+model Player {
+  id        String  @id @default(uuid())
+  teamId    String
+  name      String
+  nickname  String?
+  position  String
+  number    Int
+  photoUrl  String?
+  
+  stats     String? // JSON
+
+  team      Team    @relation(fields: [teamId], references: [id])
+}
+
+model SystemSettings {
+  id   String @id
+  data Json
+}
+
+model SettingsLog {
+  id        String   @id @default(uuid())
+  tenantId  String
+  userId    String
+  userEmail String
+  module    String
+  action    String
+  oldValue  Json?
+  newValue  Json?
+  createdAt DateTime
+}
+
+model UserSession {
+  id         String   @id @default(uuid())
+  userId     String
+  token      String
+  ipAddress  String
+  userAgent  String
+  createdAt  DateTime
+  expiresAt  DateTime
+  isActive   Boolean
+}
+
+model PrivacyConsent {
+  id          String   @id @default(uuid())
+  userId      String
+  consentType String
+  accepted    Boolean
+  acceptedAt  DateTime
+  ipAddress   String
+}
+
+model Otp {
+  id         String   @id @default(uuid())
+  phone      String
+  code       String
+  expires_at DateTime
+  verified   Boolean
+}
+
+model Product {
+  id          String  @id @default(uuid())
+  teamId      String
+  name        String
+  description String
+  price       Float
+  category    String
+  isNew       Boolean @default(false)
+  isOfficial  Boolean @default(false)
+  
+  images      String // JSON
+  variants    String // JSON
+  installments String? // JSON
+
+  team        Team    @relation(fields: [teamId], references: [id])
+}
+
+model Match {
+  id            String  @id @default(uuid())
+  teamId        String
+  date          DateTime
+  location      String
+  opponent      String
+  opponentLogoUrl String?
+  isHome        Boolean
+  
+  score         String? // JSON
+  championship  String?
+  status        String?
+  round         String?
+
+  team          Team    @relation(fields: [teamId], references: [id])
+}
+
+model Sponsor {
+  id            String  @id @default(uuid())
+  teamId        String
+  name          String
+  logoUrl       String
+  description   String
+  websiteUrl    String?
+  instagramUrl  String?
+  isMaster      Boolean @default(false)
+  category      String?
+  whatsapp      String?
+  status        String?
+  order         Int?
+
+  team          Team    @relation(fields: [teamId], references: [id])
+}
+
+model News {
+  id        String   @id @default(uuid())
+  teamId    String
+  title     String
+  summary   String
+  content   String?
+  date      DateTime
+  imageUrl  String?
+
+  team      Team     @relation(fields: [teamId], references: [id])
+}
+
+model Member {
+  id            String  @id @default(uuid())
+  teamId        String
+  name          String
+  email         String
+  phone         String?
+  cpf           String?
+  planId        String
+  status        String
+  since         DateTime
+  paymentMethod String?
+
+  team          Team    @relation(fields: [teamId], references: [id])
+}
